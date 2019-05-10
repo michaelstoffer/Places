@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		D62DF5E2227152580063AED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DF5E1227152580063AED8 /* AppDelegate.swift */; };
-		D62DF5E4227152580063AED8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DF5E3227152580063AED8 /* ViewController.swift */; };
 		D62DF5E7227152580063AED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62DF5E5227152580063AED8 /* Main.storyboard */; };
 		D62DF5E9227152590063AED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D62DF5E8227152590063AED8 /* Assets.xcassets */; };
 		D62DF5EC227152590063AED8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D62DF5EA227152590063AED8 /* LaunchScreen.storyboard */; };
+		D62DF5F9227155DB0063AED8 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DF5F8227155DB0063AED8 /* PlacesTableViewController.swift */; };
+		D62DF5FB2271560B0063AED8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DF5FA2271560B0063AED8 /* MapViewController.swift */; };
+		D62DF5FD2271583C0063AED8 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DF5FC2271583C0063AED8 /* Place.swift */; };
+		D62DF5FF227158BD0063AED8 /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62DF5FE227158BD0063AED8 /* PlaceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D62DF5DE227152580063AED8 /* Places2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D62DF5E1227152580063AED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D62DF5E3227152580063AED8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D62DF5E6227152580063AED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D62DF5E8227152590063AED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D62DF5EB227152590063AED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D62DF5ED227152590063AED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D62DF5F8227155DB0063AED8 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		D62DF5FA2271560B0063AED8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		D62DF5FC2271583C0063AED8 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		D62DF5FE227158BD0063AED8 /* PlaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,57 @@
 		D62DF5E0227152580063AED8 /* Places2 */ = {
 			isa = PBXGroup;
 			children = (
-				D62DF5E1227152580063AED8 /* AppDelegate.swift */,
-				D62DF5E3227152580063AED8 /* ViewController.swift */,
-				D62DF5E5227152580063AED8 /* Main.storyboard */,
-				D62DF5E8227152590063AED8 /* Assets.xcassets */,
-				D62DF5EA227152590063AED8 /* LaunchScreen.storyboard */,
-				D62DF5ED227152590063AED8 /* Info.plist */,
+				D62DF5F6227152C80063AED8 /* Models */,
+				D62DF5F7227152D00063AED8 /* Model Controllers */,
+				D62DF5F4227152A70063AED8 /* Storyboards */,
+				D62DF5F5227152B80063AED8 /* View Controllers */,
+				D62DF5F32271528A0063AED8 /* Resources */,
 			);
 			path = Places2;
+			sourceTree = "<group>";
+		};
+		D62DF5F32271528A0063AED8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D62DF5E1227152580063AED8 /* AppDelegate.swift */,
+				D62DF5E8227152590063AED8 /* Assets.xcassets */,
+				D62DF5ED227152590063AED8 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D62DF5F4227152A70063AED8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D62DF5E5227152580063AED8 /* Main.storyboard */,
+				D62DF5EA227152590063AED8 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D62DF5F5227152B80063AED8 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D62DF5F8227155DB0063AED8 /* PlacesTableViewController.swift */,
+				D62DF5FA2271560B0063AED8 /* MapViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		D62DF5F6227152C80063AED8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D62DF5FC2271583C0063AED8 /* Place.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D62DF5F7227152D00063AED8 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D62DF5FE227158BD0063AED8 /* PlaceController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D62DF5E4227152580063AED8 /* ViewController.swift in Sources */,
 				D62DF5E2227152580063AED8 /* AppDelegate.swift in Sources */,
+				D62DF5F9227155DB0063AED8 /* PlacesTableViewController.swift in Sources */,
+				D62DF5FF227158BD0063AED8 /* PlaceController.swift in Sources */,
+				D62DF5FB2271560B0063AED8 /* MapViewController.swift in Sources */,
+				D62DF5FD2271583C0063AED8 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +336,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XVDLP5XYQ;
-				INFOPLIST_FILE = Places2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Places2/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +354,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3XVDLP5XYQ;
-				INFOPLIST_FILE = Places2/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Places2/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
